@@ -1,0 +1,95 @@
+{
+  "name": "Promptería · Bento claro",
+  "dataColors": [
+    "#FF5A1F",
+    "#0D0D12",
+    "#FFB38A",
+    "#A3A3AE",
+    "#12A150",
+    "#FF8A00",
+    "#E11D48",
+    "#6E6F7C"
+  ],
+  "background": "#EDEDF0",
+  "foreground": "#0D0D12",
+  "tableAccent": "#FF5A1F",
+  "good": "#12A150",
+  "neutral": "#FF8A00",
+  "bad": "#E11D48",
+  "maximum": "#FF5A1F",
+  "center": "#0D0D12",
+  "minimum": "#FFB38A",
+  "textClasses": {
+    "callout": {
+      "fontSize": 32,
+      "fontFace": "Segoe UI Bold",
+      "color": "#0D0D12"
+    },
+    "title": {
+      "fontSize": 13,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#0D0D12"
+    },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#0D0D12"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#6E6F7C"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "radius": 28
+          }
+        ],
+        "title": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#0D0D12"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#EDEDF0"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}

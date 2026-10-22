@@ -1,0 +1,95 @@
+{
+  "name": "Promptería · Medianoche iridiscente",
+  "dataColors": [
+    "#9DBBFF",
+    "#5EE7DF",
+    "#E39BFF",
+    "#FFC978",
+    "#5EE7C8",
+    "#FFC978",
+    "#FF8BA7",
+    "#8F94B8"
+  ],
+  "background": "#06070E",
+  "foreground": "#EEF0FF",
+  "tableAccent": "#9DBBFF",
+  "good": "#5EE7C8",
+  "neutral": "#FFC978",
+  "bad": "#FF8BA7",
+  "maximum": "#9DBBFF",
+  "center": "#5EE7DF",
+  "minimum": "#E39BFF",
+  "textClasses": {
+    "callout": {
+      "fontSize": 32,
+      "fontFace": "Segoe UI Light",
+      "color": "#EEF0FF"
+    },
+    "title": {
+      "fontSize": 13,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#EEF0FF"
+    },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#EEF0FF"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#8F94B8"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#111219"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#1C1D24"
+              }
+            },
+            "radius": 22
+          }
+        ],
+        "title": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#EEF0FF"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#06070E"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}

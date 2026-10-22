@@ -1,0 +1,66 @@
+# Estilo visual del proyecto: Vidrio líquido
+
+Cuando toques estilos o componentes visuales, seguí este estilo. No cambies la estructura, el layout, los textos, los datos, la lógica ni el tipo de gráficos: solo colores, tipografía, formas, superficies y el estilo visual de los componentes.
+
+## Tokens
+
+```css
+/* Promptería · Vidrio líquido */
+:root {
+  --bg: #DCE3F3;
+  --bg-img: radial-gradient(circle at 5% 10%, #FFA3CD 0, transparent 35%), radial-gradient(circle at 95% 20%, #7DB8FF 0, transparent 40%), radial-gradient(circle at 60% 95%, #FFE08A 0, transparent 40%);
+  --surface: rgba(255,255,255,.5);
+  --surface-2: rgba(255,255,255,.65);
+  --border: rgba(255,255,255,.8);
+  --ink: #0E1424;
+  --muted: #4F5A76;
+  --accent: #2F6BFF;
+  --accent-ink: #FFFFFF;
+  --pos: #0F9F6E;
+  --warn: #C26A00;
+  --neg: #E0335F;
+  --c1: #2F6BFF;
+  --c2: #FF7EB3;
+  --c3: #A78BFA;
+  --c4: #22B8CF;
+  --hero: linear-gradient(150deg, rgba(255,255,255,.8), rgba(255,255,255,.4));
+  --hero-ink: #0E1424;
+  --hero-muted: #4F5A76;
+  --card-bg: linear-gradient(135deg, #5D8DFF 0, #A78BFA 50%, #FF7EB3 100%);
+  --grid: rgba(14,20,36,.07);
+  --track: rgba(14,20,36,.08);
+  --font: "Manrope", system-ui, sans-serif;
+  --font-num: "Manrope", system-ui, sans-serif;
+  --num-w: 300;
+  --num-ls: -0.02em;
+  --num-scale: 1;
+  --num-style: normal;
+  --radius: 30px;
+  --shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 12px 30px -14px rgba(40,60,120,.35);
+  --blur: 24px;
+}
+```
+
+## Especificación
+
+Vidrio líquido. Vidrio líquido claro: paneles esmerilados que dejan pasar el color del fondo.
+
+Paleta
+- Fondo #DCE3F3, superficies rgba(255,255,255,.5), superficie elevada rgba(255,255,255,.65), bordes rgba(255,255,255,.8).
+- Texto #0E1424, texto secundario #4F5A76.
+- Acento #2F6BFF (texto encima #FFFFFF).
+- Estados: positivo #0F9F6E, alerta #C26A00, negativo #E0335F.
+- Series de gráficos, en este orden: #2F6BFF, #FF7EB3, #A78BFA, #22B8CF.
+
+Tipografía: Manrope. Números en peso 300; títulos en 600.
+Formas: Radio 30px. Bordes blancos al 80% y un brillo interno arriba (inset 0 1px 0 rgba(255,255,255,.9)) con una sombra azulada suave.
+Superficies: Fondo #DCE3F3 con tres manchas pastel grandes (rosa #FFA3CD, celeste #7DB8FF, amarillo #FFE08A). Paneles blancos al 50% con backdrop-filter blur(24px) saturate(1.4).
+Componentes: Botón primario azul #2F6BFF; secundarios de vidrio. Píldoras de vidrio; la activa, azul.
+Gráficos: Líneas de 2,5px con curvas suaves y relleno degradé muy transparente. Series: azul, rosa, lila, turquesa.
+Detalles: Todo se siente liviano y luminoso; nada de negro puro.
+Evitá: Bordes oscuros, sombras grises duras, fondos planos.
+
+## Reglas
+
+- Ningún color hex suelto en componentes: siempre variables.
+- Contraste AA en todo el texto, foco de teclado visible, cifras tabulares en los números y que se vea bien tanto en pantalla grande como en celular.

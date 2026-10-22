@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#121211">
+<meta name="description" content="Estilos visuales, prompts por herramienta, exportaciones y un MCP server para darle look a cualquier interfaz hecha con IA.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Promptería: dale un look profesional a cualquier interfaz hecha con IA">
+<meta property="og:description" content="Siete estilos con prompts para Claude, Codex, Grok, Cursor y v0, tokens, temas de Power BI y un MCP server.">
+<meta property="og:image" content="https://cardo991.github.io/prompteria/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<title>Promptería</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,600;1,800&family=IBM+Plex+Mono:wght@400&family=Instrument+Serif&family=Inter+Tight:wght@400;500;600;800&family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/css/base.css">
+<link rel="stylesheet" href="src/css/layout.css">
+<link rel="stylesheet" href="src/css/sections.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand"><h1>Promptería</h1><p>Elegí un estilo y llevate el prompt, los tokens o la regla para tu herramienta.</p></div>
+    <div class="ctl"><span id="ls">Estilo</span><div class="chips" id="styles" role="group" aria-labelledby="ls"></div></div>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#galeria">Galería</a><a href="#crear">Tu estilo</a><a href="#prompts">Prompts</a><a href="#constructor">Constructor</a><a href="#powerbi">Power BI</a><a href="#exportar">Exportar</a><a href="#graficos">Gráficos</a><a href="#mcp">MCP</a><a href="#comparar">Comparar</a><a href="#recursos">Recursos</a>
+    </nav>
+  </div>
+
+  <section class="hero-top" aria-labelledby="h-hero">
+    <div class="hero-copy">
+      <h2 id="h-hero">Dale un look profesional a cualquier interfaz hecha con IA</h2>
+      <p>Elegí uno de los siete estilos o creá el tuyo desde tu color de marca. Llevatelo como prompt para Claude, Codex, Grok, Cursor o v0, como tokens, tema de Power BI o regla para tu agente, con un solo comando.</p>
+      <div class="hero-cta"><a class="btn primary" href="#crear">Crear mi estilo</a><a class="btn" href="#prompts">Copiar un prompt</a><a class="btn" href="#powerbi">Llevar a Power BI</a></div>
+      <pre class="snip hero-cmd">npx prompteria add aurora</pre>
+    </div>
+    <figure class="hero-viz" aria-label="Vista previa: un dashboard cambiando de estilo">
+      <div class="hv-stage" id="hvStage"></div>
+      <figcaption><span id="hvName"></span><button class="btn" type="button" id="hvUse">Usar este estilo</button></figcaption>
+    </figure>
+  </section>
+
+  <section class="sec" id="galeria" aria-labelledby="h-gal">
+    <div class="sec-h"><h2 id="h-gal">Galería</h2><p>Seis dashboards con su propia disposición. El estilo cambia solo el look.</p></div>
+    <div class="chips" id="types" role="group" aria-label="Dashboard"></div>
+    <div id="dash" aria-live="polite"></div>
+  </section>
+
+  <section class="sec" id="crear" aria-labelledby="h-cr">
+    <div class="sec-h"><h2 id="h-cr">Creá tu estilo</h2><p>Elegí tu color de marca y Promptería arma el estilo completo, con contraste AA en el texto. Probalo en esta página y llevatelo.</p></div>
+    <div class="cols">
+      <div class="card">
+        <div class="form cr-form">
+          <label>Nombre<input id="crName" type="text" value="Mi marca" maxlength="40"></label>
+          <label>Color de marca<span class="colorin"><input id="crPrimary" type="color" value="#0F766E"><input id="crPrimaryHex" type="text" value="#0F766E" maxlength="7" aria-label="Color de marca en hex"></span></label>
+          <label>Segundo color (opcional)<span class="colorin"><input id="crSecondary" type="color" value="#E3925A"><label class="inline"><input id="crUse2" type="checkbox"> Usarlo</label></span></label>
+          <label>Modo<select id="crMode"><option value="dark">Oscuro</option><option value="light">Claro</option></select></label>
+        </div>
+        <div class="palette" id="crPalette"></div>
+        <p class="tip" id="crContrast"></p>
+        <div class="hero-cta"><button class="btn primary" type="button" id="crApply">Probar en la página</button><button class="btn" type="button" id="crJson">Descargar tema Power BI</button></div>
+      </div>
+      <div class="card">
+        <h3>Aplicalo en tu proyecto</h3>
+        <div class="code"><button class="btn copy" type="button" data-copy="#crCmd">Copiar</button><pre id="crCmd"></pre></div>
+        <p class="tip">Detecta si usás Claude Code, Cursor o Codex y deja la skill, la regla o el AGENTS.md en su lugar, más los tokens.</p>
+        <h3>O pedíselo al agente</h3>
+        <div class="code"><button class="btn copy" type="button" data-copy="#crPrompt">Copiar</button><pre id="crPrompt"></pre></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="prompts" aria-labelledby="h-pr">
+    <div class="sec-h"><h2 id="h-pr">Prompts por herramienta</h2><p>El mismo estilo, escrito como lo entiende mejor cada herramienta. Solo look &amp; feel.</p></div>
+    <div class="card">
+      <div class="tabs" id="toolTabs" role="tablist" aria-label="Herramienta"></div>
+      <p class="tip" id="toolTip"></p>
+      <div class="code"><button class="btn primary copy" type="button" data-copy="#promptOut">Copiar prompt</button><pre id="promptOut"></pre></div>
+    </div>
+  </section>
+
+  <section class="sec" id="constructor" aria-labelledby="h-co">
+    <div class="sec-h"><h2 id="h-co">Constructor</h2><p>Armá el prompt completo para construir un dashboard desde cero: qué mostrar, cómo disponerlo, en qué stack y con qué estilo.</p></div>
+    <div class="card">
+      <div class="form">
+        <label>Dashboard<select id="cType"></select></label>
+        <label>Stack<select id="cStack"></select></label>
+        <label>Herramienta<select id="cTool"></select></label>
+      </div>
+      <div class="code"><button class="btn primary copy" type="button" data-copy="#buildOut">Copiar prompt</button><pre id="buildOut"></pre></div>
+    </div>
+  </section>
+
+  <section class="sec" id="powerbi" aria-labelledby="h-pbi">
+    <div class="sec-h"><p class="pbi-eyebrow">TU MARCA, TAMBIÉN EN TUS REPORTES</p><h2 id="h-pbi">Power BI merece su propio estilo</h2><p>Llevá la identidad visual de tu marca a Power BI Desktop. Elegí un estilo arriba o creá el tuyo y descargá un tema listo para importar.</p></div>
+    <div class="cols pbi-layout">
+      <div class="card pbi-theme">
+        <span class="pbi-badge">TEMA PARA POWER BI DESKTOP</span>
+        <h3 id="pbiName"></h3>
+        <p>Una paleta consistente para tus gráficos, fondos y textos, con tipografías y formato base para los visuales.</p>
+        <div class="pbi-palette" id="pbiPalette" aria-label="Colores del tema"></div>
+        <dl class="pbi-features"><div><dt>Gráficos</dt><dd>8 colores para series de datos</dd></div><div><dt>Indicadores</dt><dd>Colores positivos, neutros y negativos</dd></div><div><dt>Reporte</dt><dd>Fondos, bordes, títulos y etiquetas</dd></div></dl>
+        <button class="btn primary" type="button" id="pbiDownload">Descargar tema .json</button>
+        <p class="tip">El archivo aplica formato visual. Los datos, las medidas y la distribución del reporte los definís en Power BI.</p>
+      </div>
+      <div class="card pbi-guide">
+        <h3>Del estilo al reporte, en tres pasos</h3>
+        <ol><li><strong>Elegí tu identidad</strong><p>Usá el selector de estilos de arriba. Para tu marca, creá una paleta en «Tu estilo» y tocá «Probar en la página».</p></li><li><strong>Descargá el tema</strong><p>Guardá el archivo .json desde esta sección. Si estás creando una paleta, también podés descargarla directamente desde «Tu estilo».</p></li><li><strong>Importalo en Power BI Desktop</strong><p>Abrí tu reporte y entrá en <b>Vista → Temas → Examinar temas</b>. Seleccioná el archivo descargado.</p></li></ol>
+        <p class="tip">Los visuales con formato manual pueden conservar sus colores. Restablecé su formato para que hereden el tema. La vista de la galería es una referencia del estilo; el resultado depende de los visuales de tu reporte.</p>
+        <a href="https://learn.microsoft.com/es-es/power-bi/create-reports/desktop-report-themes" target="_blank" rel="noopener noreferrer">Guía de temas de Microsoft ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="exportar" aria-labelledby="h-ex">
+    <div class="sec-h"><h2 id="h-ex">Exportar</h2><p>El estilo activo en el formato que use tu proyecto o tu agente.</p></div>
+    <div class="exgrid" id="exGrid"></div>
+    <div class="card"><div class="code"><div class="code-actions"><button class="btn" type="button" id="exDownload">Descargar</button><button class="btn primary copy" type="button" data-copy="#exOut">Copiar</button></div><p class="tip" id="exName"></p><pre id="exOut"></pre></div></div>
+  </section>
+
+  <section class="sec" id="graficos" aria-labelledby="h-gr">
+    <div class="sec-h"><h2 id="h-gr">Recetario de gráficos</h2><p>Cada gráfico con cuándo usarlo y el prompt para pedirlo. Usan los tokens del estilo, así que funcionan con cualquiera.</p></div>
+    <div class="recipes" id="recipes"></div>
+  </section>
+
+  <section class="sec" id="mcp" aria-labelledby="h-mcp">
+    <div class="sec-h"><h2 id="h-mcp">MCP server</h2><p>Conectá Promptería a tu agente y pedile cosas como "aplicá el estilo Bento claro a este proyecto".</p></div>
+    <div class="cols">
+      <div class="card">
+        <h3>Instalación</h3>
+        <pre class="snip">npx -y prompteria mcp</pre>
+        <p class="tip">O cloná el repo y usá <code>node mcp/server.mjs</code>.</p>
+        <h3>Claude Code</h3>
+        <pre class="snip">claude mcp add prompteria -- npx -y prompteria mcp</pre>
+        <h3>Codex (~/.codex/config.toml)</h3>
+        <pre class="snip">[mcp_servers.prompteria]
+command = "npx"
+args = ["-y", "prompteria", "mcp"]</pre>
+        <h3>Cursor y Claude Desktop</h3>
+        <pre class="snip">{
+  "mcpServers": {
+    "prompteria": {
+      "command": "npx",
+      "args": ["-y", "prompteria", "mcp"]
+    }
+  }
+}</pre>
+        <p class="tip">Para probarlo a mano: <code>npm run inspect</code>.</p>
+      </div>
+      <div class="card">
+        <h3>Herramientas</h3>
+        <ul class="tools">
+          <li><code>list_styles</code><span>Lista los estilos con su concepto y colores.</span></li>
+          <li><code>get_style_prompt</code><span>Prompt de look &amp; feel de un estilo para una herramienta.</span></li>
+          <li><code>build_dashboard_prompt</code><span>Prompt completo: tipo de dashboard, stack, estilo y herramienta.</span></li>
+          <li><code>get_tokens</code><span>El estilo en CSS, Tailwind, design tokens, Power BI, SKILL.md, AGENTS.md o regla de Cursor.</span></li>
+          <li><code>create_style</code><span>Crea un estilo nuevo a partir de tu color de marca.</span></li>
+          <li><code>quality_checklist</code><span>La checklist para revisar lo que generó la IA.</span></li>
+        </ul>
+        <h3>Ejemplos para pedirle al agente</h3>
+        <ul class="asks">
+          <li>Listá los estilos de Promptería y aplicá el que mejor quede con una app de finanzas.</li>
+          <li>Traé el tema de Power BI del estilo Grafito y cobre y guardalo en themes/.</li>
+          <li>Armá con Promptería el prompt de un dashboard de clima en Angular con estilo Vidrio líquido y construilo.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="comparar" aria-labelledby="h-cmp">
+    <div class="sec-h"><h2 id="h-cmp">Comparar modelos</h2><p>El mismo prompt corrido en distintas herramientas, lado a lado.</p></div>
+    <div id="cmp"></div>
+  </section>
+
+  <section class="sec" id="recursos" aria-labelledby="h-re">
+    <div class="sec-h"><h2 id="h-re">Recursos</h2><p>Documentación oficial y herramientas que vale la pena tener a mano.</p></div>
+    <div class="res" id="res"></div>
+  </section>
+
+  <footer class="foot">Promptería · Los datos de los dashboards son de ejemplo · Licencia MIT</footer>
+</div>
+<script src="src/core/styles.js"></script>
+<script src="src/core/catalog.js"></script>
+<script src="src/core/generators.js"></script>
+<script src="src/core/create.js"></script>
+<script src="comparaciones/comparaciones.js"></script>
+<script src="src/js/charts.js"></script>
+<script src="src/js/dashboards.js"></script>
+<script src="src/js/app.js"></script>
+</body>
+</html>

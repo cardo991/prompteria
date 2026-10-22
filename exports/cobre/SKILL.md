@@ -1,0 +1,88 @@
+---
+name: estilo-cobre
+description: Aplica el estilo visual "Grafito y cobre" de Promptería (grafito y cobre, elegante y silencioso, como el dial de un reloj) a interfaces y dashboards. Usar cuando pidan el estilo Grafito y cobre, este look, estos colores o "estilo cobre".
+---
+
+# Estilo Grafito y cobre
+
+No cambies la estructura, el layout, los textos, los datos, la lógica ni el tipo de gráficos: solo colores, tipografía, formas, superficies y el estilo visual de los componentes.
+
+## Tokens
+
+Definí estas variables en el CSS global (o mapealas al sistema de tokens del proyecto) y usalas en todos los componentes:
+
+```css
+/* Promptería · Grafito y cobre */
+:root {
+  --bg: #161514;
+  --bg-img: none;
+  --surface: #1F1E1C;
+  --surface-2: #282624;
+  --border: #2F2D2A;
+  --ink: #EEE7DE;
+  --muted: #9C9389;
+  --accent: #E3925A;
+  --accent-ink: #1A110B;
+  --pos: #A9C48A;
+  --warn: #E9B562;
+  --neg: #DB7B6B;
+  --c1: #E3925A;
+  --c2: #F3B98A;
+  --c3: #8C6A55;
+  --c4: #A9C48A;
+  --hero: radial-gradient(circle at 100% 0, #7A3F1E 0, transparent 60%), linear-gradient(160deg, #2B2622, #1D1B19);
+  --hero-ink: #EEE7DE;
+  --hero-muted: #BDB3A7;
+  --card-bg: radial-gradient(circle at 100% 0, #A9582B 0, transparent 60%), linear-gradient(160deg, #3A332D, #1D1B19);
+  --grid: rgba(255,240,225,.06);
+  --track: rgba(255,240,225,.08);
+  --font: "Inter", system-ui, sans-serif;
+  --font-num: "Instrument Serif", Georgia, serif;
+  --num-w: 400;
+  --num-ls: -0.01em;
+  --num-scale: 1.22;
+  --num-style: normal;
+  --radius: 18px;
+  --shadow: none;
+  --blur: 0px;
+}
+```
+
+## Especificación
+
+Grafito y cobre. Grafito y cobre, elegante y silencioso, como el dial de un reloj.
+
+Paleta
+- Fondo #161514, superficies #1F1E1C, superficie elevada #282624, bordes #2F2D2A.
+- Texto #EEE7DE, texto secundario #9C9389.
+- Acento #E3925A (texto encima #1A110B).
+- Estados: positivo #A9C48A, alerta #E9B562, negativo #DB7B6B.
+- Series de gráficos, en este orden: #E3925A, #F3B98A, #8C6A55, #A9C48A.
+
+Tipografía: Inter para textos e Instrument Serif para todos los números grandes (un 20% más grandes de lo normal). La mezcla sans + serif es la firma del estilo.
+Formas: Radio 18px, bordes de 1px #2F2D2A; el panel protagonista con borde cobre al 35%.
+Superficies: Superficies planas grafito. Panel protagonista con degradé #2B2622 → #1D1B19 y un brillo cobre arriba a la derecha.
+Componentes: Botón primario cobre con texto oscuro; secundarios con borde fino. Píldoras con borde, sin relleno.
+Gráficos: Líneas finas (2px) en cobre, barras estrechas, grilla tenue en tono cálido. Series: cobre, durazno, marrón, verde salvia.
+Detalles: Mucho aire y pocos elementos por panel.
+Evitá: Colores fríos, negritas pesadas en los números.
+
+## Cómo aplicarlo
+
+1. Encontrá dónde se definen colores, tipografías y radios (CSS global, tema, tailwind.config).
+2. Reemplazá los valores por los tokens de arriba.
+3. Buscá colores sueltos en componentes y pasalos a variables.
+4. Ajustá gráficos para que usen --c1 a --c4 en orden.
+
+## Antes de terminar
+
+- [ ] El texto tiene contraste AA (4,5:1) contra su fondo, incluido el texto secundario.
+- [ ] Todos los colores salen de variables o tokens; no quedan hex sueltos en componentes.
+- [ ] El acento se usa para una sola cosa: acción principal o dato destacado.
+- [ ] Los números usan cifras tabulares y no "bailan" al actualizarse.
+- [ ] Todo lo clickeable tiene foco de teclado visible.
+- [ ] Positivo, alerta y negativo usan siempre los mismos colores en todo el producto.
+- [ ] Los gráficos usan las series del estilo en orden y la grilla es tenue.
+- [ ] Se ve bien a 375 px de ancho: nada se corta ni hace scroll horizontal en el body.
+- [ ] Las animaciones respetan prefers-reduced-motion.
+- [ ] La IA no cambió textos, datos, layout ni lógica: solo el look.

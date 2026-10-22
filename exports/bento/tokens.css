@@ -1,0 +1,34 @@
+/* Promptería · Bento claro */
+:root {
+  --bg: #EDEDF0;
+  --bg-img: none;
+  --surface: #FFFFFF;
+  --surface-2: #F4F4F6;
+  --border: transparent;
+  --ink: #0D0D12;
+  --muted: #6E6F7C;
+  --accent: #FF5A1F;
+  --accent-ink: #FFFFFF;
+  --pos: #12A150;
+  --warn: #FF8A00;
+  --neg: #E11D48;
+  --c1: #FF5A1F;
+  --c2: #0D0D12;
+  --c3: #FFB38A;
+  --c4: #A3A3AE;
+  --hero: radial-gradient(circle at 100% 0, #FF5A1F 0, transparent 50%), radial-gradient(circle at 0 100%, #3A1A10 0, transparent 60%), #0D0D12;
+  --hero-ink: #FFFFFF;
+  --hero-muted: #B9B9C4;
+  --card-bg: radial-gradient(circle at 100% 0, #FF5A1F 0, transparent 55%), radial-gradient(circle at 0 100%, #3A1A10 0, transparent 60%), #0D0D12;
+  --grid: rgba(13,13,18,.07);
+  --track: #EEEEF2;
+  --font: "Inter Tight", "Inter", system-ui, sans-serif;
+  --font-num: "Inter Tight", "Inter", system-ui, sans-serif;
+  --num-w: 800;
+  --num-ls: -0.05em;
+  --num-scale: 1;
+  --num-style: normal;
+  --radius: 28px;
+  --shadow: 0 1px 2px rgba(0,0,0,.04);
+  --blur: 0px;
+}

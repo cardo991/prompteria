@@ -1,0 +1,95 @@
+{
+  "name": "Promptería · Vidrio líquido",
+  "dataColors": [
+    "#2F6BFF",
+    "#FF7EB3",
+    "#A78BFA",
+    "#22B8CF",
+    "#0F9F6E",
+    "#C26A00",
+    "#E0335F",
+    "#4F5A76"
+  ],
+  "background": "#DCE3F3",
+  "foreground": "#0E1424",
+  "tableAccent": "#2F6BFF",
+  "good": "#0F9F6E",
+  "neutral": "#C26A00",
+  "bad": "#E0335F",
+  "maximum": "#2F6BFF",
+  "center": "#FF7EB3",
+  "minimum": "#A78BFA",
+  "textClasses": {
+    "callout": {
+      "fontSize": 32,
+      "fontFace": "Segoe UI Light",
+      "color": "#0E1424"
+    },
+    "title": {
+      "fontSize": 13,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#0E1424"
+    },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#0E1424"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#4F5A76"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#EEF1F9"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#F8F9FD"
+              }
+            },
+            "radius": 30
+          }
+        ],
+        "title": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#0E1424"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#DCE3F3"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}

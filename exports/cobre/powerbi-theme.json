@@ -1,0 +1,95 @@
+{
+  "name": "Promptería · Grafito y cobre",
+  "dataColors": [
+    "#E3925A",
+    "#F3B98A",
+    "#8C6A55",
+    "#A9C48A",
+    "#A9C48A",
+    "#E9B562",
+    "#DB7B6B",
+    "#9C9389"
+  ],
+  "background": "#161514",
+  "foreground": "#EEE7DE",
+  "tableAccent": "#E3925A",
+  "good": "#A9C48A",
+  "neutral": "#E9B562",
+  "bad": "#DB7B6B",
+  "maximum": "#E3925A",
+  "center": "#F3B98A",
+  "minimum": "#8C6A55",
+  "textClasses": {
+    "callout": {
+      "fontSize": 32,
+      "fontFace": "Georgia",
+      "color": "#EEE7DE"
+    },
+    "title": {
+      "fontSize": 13,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#EEE7DE"
+    },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#EEE7DE"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#9C9389"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#1F1E1C"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#2F2D2A"
+              }
+            },
+            "radius": 18
+          }
+        ],
+        "title": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#EEE7DE"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#161514"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}

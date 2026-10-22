@@ -1,0 +1,95 @@
+{
+  "name": "Promptería · Aurora oliva",
+  "dataColors": [
+    "#D7F04B",
+    "#D8C47A",
+    "#C98A80",
+    "#6E8420",
+    "#C3E44A",
+    "#F2B45A",
+    "#E58A7A",
+    "#9C9C92"
+  ],
+  "background": "#121211",
+  "foreground": "#F1F1EA",
+  "tableAccent": "#D7F04B",
+  "good": "#C3E44A",
+  "neutral": "#F2B45A",
+  "bad": "#E58A7A",
+  "maximum": "#D7F04B",
+  "center": "#D8C47A",
+  "minimum": "#C98A80",
+  "textClasses": {
+    "callout": {
+      "fontSize": 32,
+      "fontFace": "Segoe UI Light",
+      "color": "#F1F1EA"
+    },
+    "title": {
+      "fontSize": 13,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#F1F1EA"
+    },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#F1F1EA"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#9C9C92"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#1C1C1A"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#2A2A26"
+              }
+            },
+            "radius": 24
+          }
+        ],
+        "title": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#F1F1EA"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#121211"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}

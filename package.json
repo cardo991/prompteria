@@ -1,0 +1,54 @@
+{
+  "name": "prompteria",
+  "version": "1.1.0",
+  "description": "Visual styles, per-tool AI prompts, design tokens, Power BI themes and an MCP server to give any AI-built interface a professional look.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "prompteria": "bin/prompteria.mjs",
+    "prompteria-mcp": "mcp/server.mjs"
+  },
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "node scripts/build.mjs",
+    "exports": "node scripts/build-exports.mjs",
+    "mcp": "node mcp/server.mjs",
+    "inspect": "npx @modelcontextprotocol/inspector node mcp/server.mjs",
+    "test": "node scripts/test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "zod": "^3.23.8"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "mcp",
+    "src/core",
+    "styles",
+    "README.md",
+    "README.es.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "claude-code",
+    "cursor-rules",
+    "agents-md",
+    "ai-skills",
+    "design-tokens",
+    "tailwind",
+    "power-bi",
+    "prompts",
+    "dashboard",
+    "ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cardo991/prompteria.git"
+  },
+  "homepage": "https://cardo991.github.io/prompteria/"
+}

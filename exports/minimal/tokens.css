@@ -1,0 +1,34 @@
+/* Promptería · Minimal pro */
+:root {
+  --bg: #0C0D0F;
+  --bg-img: none;
+  --surface: #131417;
+  --surface-2: #1A1B1F;
+  --border: #222429;
+  --ink: #E7E8EB;
+  --muted: #7C808A;
+  --accent: #8B7CFF;
+  --accent-ink: #FFFFFF;
+  --pos: #4CC38A;
+  --warn: #E5A84B;
+  --neg: #EB6F70;
+  --c1: #8B7CFF;
+  --c2: #4CC38A;
+  --c3: #E5A84B;
+  --c4: #5AB0F0;
+  --hero: linear-gradient(#131417, #131417) padding-box, linear-gradient(120deg, #8B7CFF, #222429 45%) border-box;
+  --hero-ink: #E7E8EB;
+  --hero-muted: #7C808A;
+  --card-bg: linear-gradient(140deg, #2E2A55, #131417 65%);
+  --grid: rgba(255,255,255,.05);
+  --track: #1F2126;
+  --font: "Inter", system-ui, sans-serif;
+  --font-num: "Inter", system-ui, sans-serif;
+  --num-w: 500;
+  --num-ls: -0.035em;
+  --num-scale: 0.92;
+  --num-style: normal;
+  --radius: 12px;
+  --shadow: none;
+  --blur: 0px;
+}

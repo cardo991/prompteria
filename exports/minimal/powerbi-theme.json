@@ -1,0 +1,95 @@
+{
+  "name": "Promptería · Minimal pro",
+  "dataColors": [
+    "#8B7CFF",
+    "#4CC38A",
+    "#E5A84B",
+    "#5AB0F0",
+    "#4CC38A",
+    "#E5A84B",
+    "#EB6F70",
+    "#7C808A"
+  ],
+  "background": "#0C0D0F",
+  "foreground": "#E7E8EB",
+  "tableAccent": "#8B7CFF",
+  "good": "#4CC38A",
+  "neutral": "#E5A84B",
+  "bad": "#EB6F70",
+  "maximum": "#8B7CFF",
+  "center": "#4CC38A",
+  "minimum": "#E5A84B",
+  "textClasses": {
+    "callout": {
+      "fontSize": 32,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#E7E8EB"
+    },
+    "title": {
+      "fontSize": 13,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#E7E8EB"
+    },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#E7E8EB"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#7C808A"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#131417"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#222429"
+              }
+            },
+            "radius": 12
+          }
+        ],
+        "title": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#E7E8EB"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#0C0D0F"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}
